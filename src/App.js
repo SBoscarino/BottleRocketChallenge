@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Main from './main.js';
 
+//contains header, state pass to main content component, footer.
+
 class App extends Component {
   constructor() {
     super();
@@ -388,12 +390,26 @@ class App extends Component {
     }
   }
 
-
   render() {
     return (
       <div className="App">
-        <h1>Lunch Tyme</h1>
+        <header className="titleOfApp">
+          <h1>Lunch Tyme</h1>
+          <img className="map" src="./assets/Cuts/icon_map@2x.png"/>
+        </header>
+
         <Main data={this.state}/>
+
+        <footer>
+          <div className="buttonAndLabel">
+            <img className="lunchButton" src="./assets/Cuts/tab_lunch@2x.png"/>
+            <p>Lunch</p>
+          </div>
+          <div className="buttonAndLabel">
+            <img className="internetsButton" src="./assets/Cuts/tab_internets@2x.png"/>
+            <p>Internets</p>
+          </div>
+        </footer>
       </div>
     );
   }

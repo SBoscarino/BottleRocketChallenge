@@ -10,15 +10,15 @@ class Main extends Component {
   render(){
     console.log("props", this.props.data.restaurants);
     return(
-      <div>
-      <h1>Main</h1>
+      <div className="absolute">
       <ul>
         {this.props.data.restaurants.map((eatery, i) => {
           return(
-            <li key={i}>
-            <img src={eatery.backgroundImageURL} />
-            {eatery.name}
-          -----{eatery.category}
+            <li className="fullItem" key={i}>
+              <img src={eatery.backgroundImageURL} alt={eatery.name} />
+              <img src="cellGradientBackground@2x.png" alt={eatery.name} />
+              <div className="itemTierOne">{eatery.name}</div>
+              <div className="itemTierTwo">{eatery.category}</div>
             </li>
           )
         })}
