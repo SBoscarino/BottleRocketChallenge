@@ -5,6 +5,12 @@ import './info.txt';
 class Main extends Component {
   constructor(props){
     super(props);
+
+     this.InfoAndMap = this.InfoAndMap.bind(this);
+  }
+
+  InfoAndMap(eatery) {
+    console.log(eatery);
   }
 
   render(){
@@ -14,7 +20,7 @@ class Main extends Component {
       <ul>
         {this.props.data.restaurants.map((eatery, i) => {
           return(
-            <li className="fullItem" key={i}>
+            <li onClick={() => this.InfoAndMap(eatery)} className="fullItem" key={i}>
               <img src={eatery.backgroundImageURL} alt={eatery.name} />
               <img src="cellGradientBackground@2x.png" alt={eatery.name} />
               <div className="itemTierOne">{eatery.name}</div>
