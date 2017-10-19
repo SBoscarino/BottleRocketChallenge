@@ -57,7 +57,7 @@ ul{
   display:flex;
   flex-wrap: wrap;
   align-content: center;
-  width: 90%;
+  width: 100%;
   padding: 0%;
   margin: 0%;
 }
@@ -65,7 +65,7 @@ ul{
   color: white;
   position: relative;
   padding:0%;
-  width: 46%;
+  width: 50%;
 }
 li img {
   /*position: absolute;*/
@@ -95,7 +95,7 @@ li img {
   color: white;
   background-color: rgb(42,42,42);
   font-size: 3em;
-  width: 90%;
+  width: 100%;
   height: 10%;
   padding: 1%;
 }
@@ -107,7 +107,7 @@ li img {
 footer {
   display:flex;
   bottom: 0;
-  width: 90%;
+  width: 100%;
   height: 30%;
   background-color: #222;
   color: white;
@@ -138,5 +138,22 @@ footer {
      top: 225px;
      left: 0px;
      width: 100%;
+  }
+  .absolute{
+    height: 1160px;
+    overflow: scroll;
+  }
+  .titleOfApp {
+    font-size: 3em;
+    height: 60px;
+  }
+}
+
+
+
+/*monitor*/
+@media (min-width: 1000px) {
+  footer {
+    display: none;
   }
 }
