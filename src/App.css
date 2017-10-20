@@ -12,7 +12,6 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -43,12 +42,44 @@ table {
 	border-spacing: 0;
 }
 
+
+
+
 /*tablet*/
 .App {
   text-align: center;
   font-family: 'Lato', sans-serif;
 }
-
+header {
+  display:flex;
+  color: white;
+  background-color: #43E895;
+  font-size: 25px;
+  width: 100%;
+  height: 60px;
+  padding-top: .5%;
+	padding-bottom: .5%;
+}
+.titleOfApp h1 {
+  flex-basis: 80%;
+}
+.buttonAndLabel {
+	padding-top: 5px;
+  flex-grow: 1;
+  font-size:10px;
+}
+footer {
+  display:flex;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #2A2A2A;
+  color: white;
+}
+.lunchButton, .internetsButton{
+  height: 30px;
+  width: 30px;
+}
 .map {
   height: 50px;
   width: 50px;
@@ -68,92 +99,169 @@ ul{
   width: 50%;
 }
 li img {
-  /*position: absolute;*/
   width: 100%;
   height: 100%;
 }
-.absolute{
+.gradient{
+	width: 100%;
+	 z-index: 1;
+	 position: absolute;
+}
+.mainContent{
   width: 100%;
-  height: 955px;
+  height: 888px;
   overflow: scroll;
 }
+.wordContainer {
+	position: absolute;
+	top: 170px;
+	display:flex;
+	flex-direction: column;
+	align-content: flex-start;
+	padding-left: 12px;
+}
 .itemTierOne {
-   position: absolute;
-   top: 150px;
-   left: -1;
-   width: 100%;
+	align-self: flex-start;
+	 font-weight: 700;
+	 font-size: 16px;
+	 z-index: 2;
+	 padding-bottom: 6px;
 }
 .itemTierTwo {
-  font-size: 15px;
-   position: absolute;
-   top: 170px;
-   left: 0px;
-   width: 100%;
+	align-self: flex-start;
+  font-size: 12px;
+	 z-index: 2;
 }
-.titleOfApp {
-  display:flex;
-  color: white;
-  background-color: rgb(42,42,42);
-  font-size: 3em;
-  width: 100%;
-  height: 10%;
-  padding: 1%;
+.active {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transition: 0.10s;
 }
-.titleOfApp h1 {
-  flex-basis: 80%;
+.active div {
+		text-align: left;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    transition: 0.5s;
+		padding-left: 12px;
 }
-.titleOfApp img {
+.infoHeader{
+	display:flex;
+	flex-flow: row;
+	background-color: #43E895;
+	height: 60px;
 }
-footer {
-  display:flex;
-  bottom: 0;
-  width: 100%;
-  height: 30%;
-  background-color: #222;
-  color: white;
+.infoHeader img {
+	padding-top: 10px;
+	height: 30px;
+	width: 30px;
+	flex-grow: 1;
 }
-.buttonAndLabel {
-  flex-grow: 1;
-  font-size: 20px;
+.infoHeader h2 {
+	display: inline;
+	font-weight: 700;
+	color: #FFFFFF;
+	font-size: 17px;
+	padding: 0px 80px 26px 80px;
 }
-.lunchButton, .internetsButton{
-  height: 100px;
-  width: 100px;
+.mapBtn {
+	padding-top: 10px;
+	height: 40px;
+	width: 40px;
+}
+iframe {
+	  padding: 0px;
+		margin: 0px;
+		width: 385px;
+}
+.active .title {
+	background-color: #34B379;
+	font-weight: 700;
+	width: 97%;
+	padding: 16px 0px 6px 12px;
+	color: #FFFFFF;
+}
+.titleTwo {
+	color: #FFFFFF;
+	font-weight: 400;
+	padding: 0px 0px 16px 0px;
+	background-color: #34B379;
+	width: 97%;
+}
+.titleThree {
+	font-weight: 400;
+	padding: 16px 0px 26px 12px;
+	color: #2A2A2A;
+}
+.titleFive {
+	font-weight: 400;
+	padding: 0px 0px 26px 12px;
+	color: #2A2A2A;
+}
+.active .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 40px;
+    margin-left: 10px;
+}
+.inactive{
+	display: none;
 }
 
 
 
 /* iPad Pro+ */
 @media (min-width: 769px) {
-  .itemTierOne {
-    font-size: 20px;
-     position: absolute;
-     top: 200px;
-     left: -1;
-     width: 100%;
-  }
-  .itemTierTwo {
-    font-size: 15px;
-     position: absolute;
-     top: 225px;
-     left: 0px;
-     width: 100%;
-  }
   .absolute{
     height: 1160px;
     overflow: scroll;
   }
-  .titleOfApp {
+  header {
+		padding-top: 0px;
+		padding-bottom: 10px;
     font-size: 3em;
-    height: 60px;
+    height: 85px;
   }
+	footer {
+	  height: 85px;
+	}
+	.mapBtn {
+		height: 60px;
+		width: 60px;
+	}
+	.wordContainer {
+		top: 190px;
+		padding-left: 16px;
+	}
+	.itemTierOne {
+		 font-size: 25px;
+	}
+	.itemTierTwo {
+	  font-size: 18px;
+	}
+	.buttonAndLabel {
+	  font-size:16px;
+	}
+	.lunchButton, .internetsButton{
+	  height: 40px;
+	  width: 40px;
+	}
+	.mainContent{
+	  height: 1185px;
+	}
 }
 
 
 
 /*monitor*/
-@media (min-width: 1000px) {
+@media (min-width: 1400px) {
   footer {
-    display: none;
+    height: 0px
   }
 }

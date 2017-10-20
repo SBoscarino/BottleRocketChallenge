@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import Main from './main.js';
+import icon_map from './assets/Cuts/icon_map.png';
+import tab_internets from './assets/Cuts/tab_internets.png';
+import tab_lunch from './assets/Cuts/tab_lunch.png';
 
 //contains header, state pass to main content component, footer.
 
@@ -339,25 +342,25 @@ class App extends Component {
       backgroundImageURL: "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/in_n_out_burger.png",
       category: "Fast Food Burgers",
       contact: {
-      phone: "8007861000",
-      formattedPhone: "(800) 786-1000",
-      twitter: "innoutburger"
+        phone: "8007861000",
+        formattedPhone: "(800) 786-1000",
+        twitter: "innoutburger"
       },
       location: {
-      address: "15260 Dallas Pkwy",
-      crossStreet: "at Prestonwood Town Center",
-      lat: 32.95703457542545,
-      lng: -96.82081996316793,
-      postalCode: "75248",
-      cc: "US",
-      city: "Dallas",
-      state: "TX",
-      country: "United States",
-      formattedAddress: [
-      "15260 Dallas Pkwy (at Prestonwood Town Center)",
-      "Dallas, TX 75248",
-      "United States"
-      ]
+        address: "15260 Dallas Pkwy",
+        crossStreet: "at Prestonwood Town Center",
+        lat: 32.95703457542545,
+        lng: -96.82081996316793,
+        postalCode: "75248",
+        cc: "US",
+        city: "Dallas",
+        state: "TX",
+        country: "United States",
+        formattedAddress: [
+        "15260 Dallas Pkwy (at Prestonwood Town Center)",
+        "Dallas, TX 75248",
+        "United States"
+        ]
       }
       },
       {
@@ -395,18 +398,18 @@ class App extends Component {
       <div className="App">
         <header className="titleOfApp">
           <h1>Lunch Tyme</h1>
-          <img className="map" src="./assets/Cuts/icon_map@2x.png"/>
+          <img className="mapBtn" src={icon_map}/>
         </header>
 
         <Main data={this.state}/>
 
         <footer>
           <div className="buttonAndLabel">
-            <img className="lunchButton" src="./assets/Cuts/tab_lunch@2x.png"/>
+            <img className="lunchButton" src={tab_lunch}/>
             <p>Lunch</p>
           </div>
           <div className="buttonAndLabel">
-            <img className="internetsButton" src="./assets/Cuts/tab_internets@2x.png"/>
+            <img className="internetsButton" src={tab_internets}/>
             <p>Internets</p>
           </div>
         </footer>
