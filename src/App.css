@@ -260,8 +260,67 @@ iframe {
 
 
 /*monitor*/
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   footer {
-    height: 0px
+    display:none;
   }
+	.absolute{
+		height: 1160px;
+		overflow: auto;
+	}
+	header {
+		padding-top: 0px;
+		padding-bottom: 10px;
+		font-size: 3em;
+		height: 85px;
+	}
+	footer {
+		background-color: red;
+	}
+	.mapBtn {
+		height: 60px;
+		width: 60px;
+	}
+	.wordContainer {
+		top: 370px;
+		padding-left: 20px;
+	}
+	.itemTierOne {
+		 font-size: 30px;
+	}
+	.itemTierTwo {
+		font-size: 20px;
+	}
+	iframe {
+		width: 840px;
+		height: 300px;
+	}
+	.active .title {
+		font-size: 25px;
+		width: 98%;
+		padding: 16px 0px 6px 14px;
+	}
+	.titleTwo {
+		padding-left: 20px;
+		font-size: 20px;
+		width: 98%;
+	}
+	.titleThree {
+		padding: 16px 0px 26px 20px;
+	}
+	.titleFive {
+		padding: 0px 0px 26px 20px;
+	}
+	.active .closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 50px;
+	    font-size: 40px;
+	    margin-left: 20px;
+	}
+	.mapBtn {
+		padding-left: 50px;
+		height: 60px;
+		width: 60px;
+	}
 }

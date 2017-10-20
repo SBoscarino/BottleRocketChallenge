@@ -19,11 +19,12 @@ class Main extends Component {
 //functions for grabbing an item and putting it in state as well as exiting out of the created div
   infoAndMap(eatery) {
     const currentState = this.state.active;
-    this.setState({singleItem : [eatery], isActive: "active"});
+    this.setState({ singleItem : [eatery], isActive: "active" });
   }
-  exitButton(){
+  exitButton(e){
+    console.log(e);
     console.log("clicky");
-    this.setState({singleItem : [], isActive: "inactive" });
+    this.setState({ isActive: "inactive", singleItem : [] });
   }
 
 //if we haven't clicked a div, show no div and show the regular full list. Otherwise, show the infoDiv for that location. infoDiv will contain contact info, social media info if any, and the map.
@@ -37,9 +38,9 @@ render(){
       <ul>
         <li>
         <div className="infoHeader">
-          <img onClick={() => this.exitButton} src={ic_webBack}></img>
+          <img alt="exit button" onClick={(e) => this.exitButton(e)} src={ic_webBack}></img>
           <h2>Lunch Tyme</h2>
-          <img className="mapBtn" src={icon_map}></img>
+          <img alt="map icon button" className="mapBtn" src={icon_map}></img>
         </div>
         <iframe
           title="map"
@@ -64,8 +65,6 @@ render(){
         </ul>
     </div>
   } else {
-    console.log("info div is null")
-    console.log(this.state.singleItem)
     infoDiv = null;
   }
   return(

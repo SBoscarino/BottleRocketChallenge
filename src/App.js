@@ -398,18 +398,18 @@ class App extends Component {
       <div className="App">
         <header className="titleOfApp">
           <h1>Lunch Tyme</h1>
-          <img className="mapBtn" src={icon_map}/>
+          <img alt="map icon" className="mapBtn" src={icon_map}/>
         </header>
 
         <Main data={this.state}/>
 
         <footer>
           <div className="buttonAndLabel">
-            <img className="lunchButton" src={tab_lunch}/>
+            <img alt="find lunch button" className="lunchButton" src={tab_lunch}/>
             <p>Lunch</p>
           </div>
           <div className="buttonAndLabel">
-            <img className="internetsButton" src={tab_internets}/>
+            <img alt="internet button" className="internetsButton" src={tab_internets}/>
             <p>Internets</p>
           </div>
         </footer>
